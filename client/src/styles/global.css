@@ -1,0 +1,33 @@
+body {
+  font-family: Montserrat, Roboto, sans-serif;
+  padding: 0 0vw;
+  
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+input,
+button {
+  font-family: Montserrat, Roboto, sans-serif;
+}
+
+
+
+ul,
+li {
+ 
+  list-style: none;
+}
+.cars-page-container{
+  margin: 0 5vw 0 4vw;
+  
+}
+.sideandposter{
+  display: flex;
+}

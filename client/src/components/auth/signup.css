@@ -1,0 +1,107 @@
+.signup-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+}
+
+.signup__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1vh; 
+    padding-bottom: 3vh;
+    padding-top: 0vh;
+    padding-left: 3.5vw;
+    padding-right: 3.5vw;
+    width: 30%;
+    border-radius: 1vh  ;
+    background-color: #f4f6f5;
+}
+
+.signup__content input,
+.signup__content button {
+    width: 100%; /* Ширина элементов по ширине родительского контейнера */
+    padding: 1vh; /* Отступы внутри элементов */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 0.3vh; /* Скругление углов */
+    margin-bottom: 1vh; /* Отступ между элементами */
+}
+
+.signup__content button {
+    background-color:#000000; /* Цвет фона */
+    color: white; /* Цвет текста */
+    cursor: pointer; /* Изменение курсора при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+.signup__content button:hover {
+    background-color: #474747; /* Цвет фона при наведении */
+    color: var(--blue);
+}
+.name{
+    display: flex;
+    font-weight: 900;
+    font-size: 100%;
+    margin:2vh 0    ;
+}
+.name h1{
+    font-weight: 500;
+}
+.toggle button  {
+    background-color:transparent;
+
+    border: 0;
+    color: #000000;
+    transition: color 0.2s ease;
+}
+.toggle button:hover{
+    color: var(--blue);
+    background-color:transparent;
+}
+.Container_back {
+    position: absolute;
+    font-size: 150%;
+    color: #4a4a4a; 
+    padding: 0.8vw 1vw; 
+    display: flex;
+    align-items: center;
+    
+}
+
+.Container_back img {
+    max-width: 2.5%;
+    margin-right: 0.3vw; 
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.error-message {
+
+    color:rgb(182, 23, 23);
+    margin-top: 0;
+}
+
+.error-animate {
+    animation: blink 2s linear infinite;
+}
+

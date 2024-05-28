@@ -1,0 +1,164 @@
+.product {
+  display: flex;
+  flex-grow: 1;
+  max-width: calc(100% - 18vw);
+  padding: 2.4vh;
+  column-gap: 32px;
+  color: var(--light);
+  background-color: #f1f1f1;
+  border-radius: 1vh;
+  margin-left: 1vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.images {
+  display: flex;
+  gap: 2vh;
+}
+
+.current {
+  width: 25vw;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1vh;
+}
+
+.images-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+
+.image {
+  width: 10vh;
+  height: 10vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 200%;
+  line-height: 1vh;
+  font-weight: 400;
+  color: var(--bg);
+}
+
+.price {
+  font-weight: 400;
+  font-size: 130%;
+  line-height: 2vh;
+  margin: 1vh 0 2vh 0;
+  color: green
+}
+
+
+.sizes {
+  font-size: 100%;
+  line-height: 2vh;
+  text-transform: capitalize;
+  display: flex;
+  column-gap: 2vh;
+  align-items: center;
+}
+
+.sizes {
+  margin: 2vh 0;
+}
+
+.sizes span {
+  font-size: 130%;
+  line-height: 2vh;
+  color: var(--bg);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5vh;
+}
+
+.size {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: var(--bg);
+  cursor: pointer;
+  transition: background 1s ease;
+}
+
+.size:hover,
+.size.active {
+  background: var(--blue);
+}
+
+.description {
+  font-weight: 200;
+  font-size: 100%;
+  line-height: 2vh;
+  color: var(--bg);
+}
+
+.actions {
+  margin-top: 2vh;
+  display: flex;
+  column-gap: 1vh;
+
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 100%;
+  line-height: 2vh;
+  color: var(--bg);
+  margin-top: auto;
+}
+.add{
+  padding: 0.2vh 1.5vw;
+width: 20%;
+	background: #000000;
+	border-radius: 0.3vw;
+
+	font-weight: 300;
+	font-size: 120%;
+	line-height: 1.5;
+	letter-spacing: -0.05em;
+  transition: background 0.5s ease;
+	color: #fff;
+  border: 0;
+}
+.add:hover{
+  background: var(--blue);
+  
+}
+.add:disabled {
+  cursor: not-allowed;
+  background: #828282;
+  color: white;
+}
+
+.warning{
+  color: #ad0000;
+  font-weight: 500;
+}
+.clientForm{
+  border: 0;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 0.5vw;
+  color: var(--blue);
+  text-decoration: underline;
+}
+.warning_container{
+  display: flex;
+  margin-top: 5vh;
+}

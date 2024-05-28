@@ -1,0 +1,15 @@
+.arrivals {
+    padding: 11vh 8vw 13vh 6vw
+}
+
+.arrivals__header {
+    margin-bottom: 9.5vh;
+    font-size: 150%;
+}
+
+.arrivals__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 0.3vh;
+}

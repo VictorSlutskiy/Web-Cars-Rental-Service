@@ -1,0 +1,43 @@
+.sidebar {
+  width:18vw;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  background-color:var(--dark);
+  border-radius: 2%;
+  margin-right: 2vh;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 2vh;
+  color: white;
+}
+
+.menu {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+}
+
+.link {
+  color: var(--grey);
+  font-size: 100%;
+  line-height: 2vh;
+  text-transform: capitalize;
+}
+
+.link:hover {
+  color: var(--white);
+}
+
+.link.active {
+  color: var(--blue);
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}

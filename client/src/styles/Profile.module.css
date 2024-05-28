@@ -1,0 +1,155 @@
+.profile {
+  flex-grow: 1;
+  padding: 2vh;
+  border-radius: 1vh;
+  background-color: #f1f1f1;
+ 
+  
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  width: 100%;
+  
+  color: var(--bg);
+  padding: 0.1vh 0;
+}
+
+.input {
+ 
+  background-color: #fff;
+  font-size: 100%;
+  margin: 1vh;
+  padding: 0.8vh;
+  border: 0;
+  border-radius: 5vh;
+}
+
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end; /* Align buttons to the right */
+  margin-top: auto; /* Push buttons to the bottom */
+}
+
+.group input {
+  width: 100%;
+}
+.button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 0.3vh;
+  padding: 1vh 2vh;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  cursor: pointer;
+  font-size: 100%;
+  transition: color 3s ease;
+  transition: background-color 1s ease;
+}
+.link{
+  font-size: 100%;
+  border: 0;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  color: #000000;
+  transition: color 0.5s ease;
+}
+.link:hover{
+  cursor: pointer;
+  color: var(--blue);
+}
+.button:hover {
+  color: var(--blue);
+  background-color: #373636;
+}
+
+.container {
+  display: flex;
+}
+
+.userData {
+  flex-grow: 1;
+}
+
+.imageContainer {align-items: center;
+  display: flex;
+  width:15vw;
+  
+
+}
+.imageContainer img{
+  width: 80%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.1vh;
+  text-align: center;
+}
+
+.modalActions {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 2rem;
+ 
+}
+
+.modalActions button {
+  font-size: 100%;
+  margin-right: 2vw;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.1vh;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition:color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.modalActions button:hover {
+  background-color: #424242;
+  color: var(--blue);
+}
+
+.modalCansel button {
+  margin-right: 2vw;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.1vh;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  transition:color 0.5s ease;
+
+}
+
+.modalCansel button:hover {
+  background-color: transparent;
+  color: var(--blue);
+}

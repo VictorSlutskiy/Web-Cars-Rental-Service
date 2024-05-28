@@ -1,0 +1,99 @@
+.promo {
+	margin:0 10vh 20vh;
+}
+
+.promo__content {
+	display: flex;
+	justify-content: space-between; /* Колонки будут находиться по краям */
+	gap: 5vw; /* Добавляем пространство между колонками */
+	padding-bottom: 6vh;
+	padding-top: 6vh;
+	padding-left: 3.5vw;
+	padding-right: 4vw;
+	border-radius: 1vw;
+	background-color: #f4f6f5;
+}
+
+.promo__title {
+	max-width: 25vw;
+	margin-bottom: 5vh;
+	font-weight: 900;
+	font-size: 600%;
+	line-height: 1.25;
+}
+
+.promo__desc {
+	margin-bottom: 5vh;
+	font-weight: 400;
+	font-size: 180%;
+	line-height: calc(4.8vw / 3.2);
+	letter-spacing: -0.05em;
+}
+
+.promo__btn-wrapper {
+	display: flex;
+	column-gap: 1.4vw;
+	align-items: center;
+}
+
+.promo__btn-wrapper::before {
+	content: '';
+	display: inline-block;
+	width: 190px;
+	height: 32px;
+	
+	background-image: url('./../../img/icons/decor-yellow.svg');
+	background-size: cover;
+}
+
+
+.promo__btn {
+	padding: 1vh 1.5vw;
+
+	background: #000000;
+	border-radius: 0.3vw;
+
+	font-weight: 500;
+	font-size: 120%;
+	line-height: 1.5;
+	letter-spacing: -0.05em;
+	color: #fff;
+}
+
+.highlight {
+	position: relative;
+	display: inline-block;
+}
+
+.highlight span {
+	position: relative;
+	z-index: 1;
+}
+
+.highlight::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1.2vh;
+	bottom: 1vh;
+	left: -1vw;
+	right: -8.5vw;
+	background-color: #fff;
+	transform: rotate(-2deg);
+}
+
+
+.highlight--yellow::before {
+    right: -1vw;
+    background-color: #87CEFA;
+}
+.promo__img {
+	height: auto; 
+	width: 100%; 
+	align-self: flex-end;
+	padding-bottom: 10%;
+}
+.promo__img img{
+	height: auto; 
+	width: 100%; 
+}

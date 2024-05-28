@@ -1,0 +1,115 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 0.1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+    max-width: 20%;
+    width: 100%;
+}
+
+.modal-title {
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: #333;
+}
+
+.modal-text {
+    font-size: 100%;
+    margin-bottom: 2vh;
+    color: #666;
+}
+
+.modal-ok-btn {
+    padding: 0.7vh 1.5vh;
+    background-color: #87CEFA;
+    color: white;
+    border: none;
+    border-radius: 0.1vw;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.modal-ok-btn:hover {
+    background-color: #4ab1f1;
+}
+
+.modal-link {
+    margin-left: 70%;
+    
+    color: #4ab1f1;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.modal-link:hover {
+    color: #2d8bcf;
+}
+
+
+
+
+.modal-close {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    cursor: pointer;
+    font-size: 100%;
+    color: #aaa;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+
+
+
+
+.modal-input input {
+    width: calc(100% ); 
+    padding: 1vh;
+    margin-bottom: 1.5vh;
+    border: none; 
+    background-color: #f1f1f1; /* Цвет фона */
+    border-radius: 5vh;
+    font-weight: 200;
+    font-size: 90%;
+}
+
+.modal-submit-btn {
+    margin-top: 1vh;
+    margin-left: 12vw;
+    width: 30%;
+    padding: 1vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.3vh;
+    cursor: pointer;
+    font-size: 90%;
+    transition: background-color 0.3s;
+}
+
+.modal-submit-btn:hover {
+    background-color: #696868;
+}
+
+.modal-submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

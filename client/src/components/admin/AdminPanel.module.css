@@ -1,0 +1,114 @@
+.maincontainer {
+    margin: 2vh 7vw;
+  }
+  
+  .usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh; 
+  }
+  
+  .userPanel {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr 0.7fr; 
+    width: 100%;
+    font-size: 120%;
+    background-color: #f0f0f0;
+    padding: 2vh;
+    border-radius: 0.3vh;
+    transition: box-shadow 1s ease;
+    gap: 1vh; 
+  }
+  
+  .userPanel:hover {
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.2);
+  }
+  
+  .userPanel div {
+    margin-bottom: 1vh;
+  }
+  
+  .userPanel div:last-child {
+    margin-bottom: 0;
+  }
+  
+  .image {
+    height: 3vh;
+  }
+  .filters{
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    margin-top: 2.4vh;
+   
+  }
+  
+  .filter {
+    
+    background: var(--bg);
+    border-radius: 5vh;
+    padding: 1.2vh 2.4vh;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    min-width: 10vw;
+    margin-bottom: 2vh;
+    
+  }
+  
+.full {
+    width: 100%;
+  }
+  
+  .filter input {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: transparent; 
+    border:none; 
+    outline: none;
+  }
+  .filter select {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: transparent; 
+    border:none; 
+    outline: none;
+  }
+  .filter option {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: var(--bg); 
+    border:none; 
+    outline: none;
+  }
+  
+  .filter span {
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 2vh;
+    color: var(--light);
+    text-align: right;
+  }
+   .back button{
+    padding: 1vh 2vw;
+  
+      background: var(--bg);
+      border-radius: 0.3vw;
+  
+      font-weight: 300;
+      font-size: 120%;
+      line-height: 2vh;
+      letter-spacing: -0.05em;
+    transition: background 0.5s ease;
+      color: #fff;
+  }
+  
+ .back button:hover{
+    background: #4b4b4b;
+  }

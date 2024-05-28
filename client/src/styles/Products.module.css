@@ -1,0 +1,109 @@
+.products {
+  width: 100%;
+  padding: 0.01% 1% 1% 1%;
+  background:#f1f1f1;
+  margin-top: 2vh;
+  border-radius: 1vh;
+  text-align: center;
+  color: var(--bg);
+  
+}
+.product:hover{
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.812);
+}
+
+.list {
+  margin-top: 1vh;
+  display: flex;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.product {
+  color: var(--light);
+  background: var(--bg);
+  border-radius: 1vh;
+  overflow: hidden;
+  width: calc(100% / 5 - 2vh);
+  transition:box-shadow 1s ease;
+}
+
+.product:nth-child(5n) {
+  width: calc(100% / 5);
+}
+
+.image {
+  width: 100%;
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40vh);
+}
+
+.title {
+  
+  font-weight: 300;
+  font-size: 110%;
+  line-height: 1.8vh;
+ 
+}
+
+
+.cat {
+ 
+  font-weight: 200;
+  font-size: 1em;
+  line-height: 15px;
+  color: var(--grey);
+  text-transform: uppercase;
+  margin-top: 0.5vh;
+  margin-bottom: 2.8vh;
+}
+
+.info {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5vh;
+}
+
+.price {
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 2.4vh;
+  color:var(--blue );
+}
+
+.oldPrice {
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.6vh;
+  text-decoration-line: line-through;
+  color: var(--grey);
+}
+
+.purchases {
+  color: var(--grey);
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.2vh;
+}
+
+.button {
+  margin-top: 2.4vh;
+  text-align: center;
+}

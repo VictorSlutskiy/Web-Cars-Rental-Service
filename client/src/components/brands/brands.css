@@ -1,0 +1,14 @@
+.brands {
+    padding: 0.3vw 7vw 0.35vh 3vw;
+    background-color: #87CEFA;
+    margin-bottom: 2vh;
+}
+
+.brands__list {
+    display: flex;
+    align-items: center;
+    column-gap: 7vw;
+}
+.brands__list img{
+    max-width: 100%;
+}

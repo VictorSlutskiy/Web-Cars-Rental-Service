@@ -1,0 +1,129 @@
+.home {
+  position: relative;
+  flex-grow: 1;
+  background-color: #f1f1f1;
+  border-radius: 1vh;
+ 
+  padding-top: 2%;
+  transition:box-shadow 1s ease;
+}
+
+.title {
+  font-weight: 900;
+ 
+  font-size: 1000%;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;;
+  text-align: center;
+}
+
+.product {
+  position: relative;
+  padding-top: 5%;
+  padding-left: 7%;
+  
+  display: flex;
+  align-items: stretch;
+  margin-top: 1vh;
+}
+
+.subtitle {
+  line-height: 2vh;
+  text-transform: uppercase;
+  color: var(--dark-sea);
+}
+
+.head {
+  font-weight: 700;
+  font-size: 350%;
+  line-height: 5vh;
+  text-transform: uppercase;
+  color: #000;
+  max-width: 20vw;
+  margin: 1vh 0 2vh 0;
+}
+
+.image {
+  position: relative;
+  flex-grow: 1;
+  height: 30vh;
+}
+
+.image img {
+  position: absolute;
+  bottom: -15%;
+  right: 10%;
+  width:100%;
+  padding-left: 20%;
+  max-width: unset;
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  height: auto;
+  background-color: var(--bg);
+  margin-top:5vh ;
+  border-radius: 1vh;
+ 
+}
+.home:hover{
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.812);
+}
+.video{
+width: 100%;
+border-radius: 1vh;
+transition:box-shadow 1s ease;
+}
+.video:hover{
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.812);
+}
+.bannercontainer {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* установите z-index, чтобы текст был над видео */
+}
+
+.discount { 
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 85%;
+  font-weight: 100;
+  font-size: 450%;
+
+  color: var(--light);
+}
+
+.discount span {
+  color: var(--blue);
+  font-weight: 300;
+}
+.discount p {
+  margin: 0; /* убираем отступы */
+}
+.buttondeffault{
+  padding: 1vh 1.5vw;
+
+	background: #000000;
+	border-radius: 0.3vw;
+
+	font-weight: 500;
+	font-size: 120%;
+	line-height: 1.5;
+	letter-spacing: -0.05em;
+  transition: background 0.5s ease;
+	color: #fff;
+}
+
+.buttondeffault:hover{
+  background: #4b4b4b;
+}

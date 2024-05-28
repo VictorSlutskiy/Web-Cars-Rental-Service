@@ -1,0 +1,319 @@
+.maincontainer {
+    margin: 2vh 7vw;
+  }
+  
+  .usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh; 
+  }
+  
+  .userPanel {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr 0.7fr; 
+    width: 100%;
+    font-size: 120%;
+    background-color: #f0f0f0;
+    padding: 2vh;
+    border-radius: 0.3vh;
+    transition: box-shadow 1s ease;
+    gap: 1vh; 
+  }
+  
+  .userPanel:hover {
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.2);
+  }
+  
+  .userPanel div {
+    margin-bottom: 1vh;
+  }
+  
+  .userPanel div:last-child {
+    margin-bottom: 0;
+  }
+  
+  .image {
+    height: 3vh;
+  }
+  .filters{
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    margin-top: 2.4vh;
+   
+  }
+  
+  .filter {
+    
+    background: var(--bg);
+    border-radius: 5vh;
+    padding: 1.2vh 2.4vh;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    min-width: 10vw;
+    margin-bottom: 2vh;
+    
+  }
+  
+.full {
+    width: 100%;
+  }
+  
+  .filter input {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: transparent; 
+    border:none; 
+    outline: none;
+  }
+  .filter select {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: transparent; 
+    border:none; 
+    outline: none;
+  }
+  .filter option {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: var(--bg); 
+    border:none; 
+    outline: none;
+  }
+  
+  .filter span {
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 2vh;
+    color: var(--light);
+    text-align: right;
+  }
+   .back button{
+    padding: 1vh 2vw;
+  
+      background: var(--bg);
+      border-radius: 0.3vw;
+  
+      font-weight: 300;
+      font-size: 120%;
+      line-height: 2vh;
+      letter-spacing: -0.05em;
+    transition: background 0.5s ease;
+      color: #fff;
+  }
+  
+ .back button:hover{
+    background: #4b4b4b;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 0.1vw;
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+    max-width: 40%;
+    width: 100%;
+}
+
+.modal-title {
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: #333;
+}
+
+.modal-text {
+    display: flex;
+    font-size: 100%;
+    margin-bottom: 2vh;
+    color: #666;
+}
+.modal-text img{
+    width: 8.5vw;
+}
+
+.modal-ok-btn {
+    padding: 0.7vh 1.5vh;
+    background-color: #87CEFA;
+    color: white;
+    border: none;
+    border-radius: 0.1vw;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.modal-ok-btn:hover {
+    background-color: #4ab1f1;
+}
+
+.modal-link {
+    margin-left: 70%;
+    
+    color: #4ab1f1;
+    text-decoration: none;
+    font-size: 100%;
+}
+
+.modal-link:hover {
+    color: #2d8bcf;
+}
+
+
+
+
+.modal-close {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    cursor: pointer;
+    font-size: 250%;
+    color: #aaa;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+
+
+
+
+.modal-input input {
+    width: calc(100% ); 
+    padding: 1vh;
+    margin-bottom: 1.5vh;
+    border: none; 
+    background-color: #f1f1f1; /* Цвет фона */
+    border-radius: 5vh;
+    font-weight: 200;
+    font-size: 90%;
+}
+
+.modal-submit-btn {
+    margin-top: 1vh;
+    margin-left: 12vw;
+    width: 30%;
+    padding: 1vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.3vh;
+    cursor: pointer;
+    font-size: 90%;
+    transition: background-color 0.3s;
+}
+
+.modal-submit-btn:hover {
+    background-color: #696868;
+}
+
+.modal-submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.add-image-btn{
+    width: 30%;
+    margin-bottom: 1.5vh;
+    margin-left: 2vh;
+    padding: 0 1vh;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.3vh;
+    cursor: pointer;
+    font-size: 90%;
+    transition: background-color 0.3s;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 1vw;
+  }
+  
+  
+  .delete-image-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+  }  .filter select {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: transparent; 
+    border:none; 
+    outline: none;
+  }
+  .filter option {
+    font-weight: 200;
+    font-size: 100%;
+    line-height: 2vh;
+    color: white;
+    background-color: var(--bg); 
+    border:none; 
+    outline: none;
+  }
+  .filter {
+    
+    background: var(--bg);
+    border-radius: 5vh;
+    padding: 1.2vh 2.4vh;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    min-width: 10vw;
+    margin-bottom: 2vh;
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+ 
+  .categoryContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .categoryImage {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+  }
+ 
+  
+  .image-container img {
+   height: 20vh;
+    object-fit: cover; /* Масштабирование изображения с сохранением пропорций и обрезкой */
+  }
