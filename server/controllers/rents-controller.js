@@ -9,7 +9,7 @@ class RentsController {
       try {
           const { rentId } = req.params;
           
-          await productService.deleteRent(rentId);
+          await rentsService.deleteRent(rentId);
           return res.send('Удалено успешно');
       } catch (e) {
           next(e);

@@ -16,37 +16,40 @@ const LoginForm: FC = () => {
 
     const handleButtonClick = async () => {
         try {
-            if (isLoginMode) {
-                if (!email || !password) {
-                    setError('Email and password are required');
-                    return;
-                }
-               
-                const response = await store.login(email, password);
-                if (response === 400) {
-                    setError('Incorrect email or password');
-                    return;
-                }
-            } else {
-                if (!email || !password || !confirmPassword) {
+            
+                if (!email || !password || (!isLoginMode && !confirmPassword)) {
                     setError('All fields are required');
                     return;
                 }
-                if (password.length < 8) {
+        
+                if (/\s/.test(email) || /\s/.test(password) || (!isLoginMode && /\s/.test(confirmPassword))) {
+                    setError('Email and password cannot contain spaces');
+                    return;
+                }
+        
+                if (!isLoginMode && password.length < 8) {
                     setError('Password must be at least 8 characters long');
                     return;
                 }
-                if (password !== confirmPassword) {
+        
+                if (!isLoginMode && password !== confirmPassword) {
                     setError('Passwords do not match');
                     return;
                 }
-                const response = await store.registration(email, password);
-                if (response === 400) {
-                    setError('Email is already taken');
-                    return;
+        
+                if (isLoginMode) {
+                    const response = await store.login(email, password);
+                    if (response === 400) {
+                        setError('Incorrect email or password');
+                        return;
+                    }
+                } else {
+                    const response = await store.registration(email, password);
+                    if (response === 400) {
+                        setError('Email is already taken');
+                        return;
+                    }
                 }
-            }
-            setError('');
             setErrorClass('error-animate');
             setTimeout(() => {
                 setErrorClass('');

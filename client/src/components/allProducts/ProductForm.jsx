@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useGetProductsQuery } from "../../features/api/apiSlice";
+
 import styles from "../../styles/Category.module.css";
+
 import Products from "../Products/Products";
 import Footer from "../Footer/Footer";
 
@@ -17,56 +20,26 @@ const ProductForm = () => {
     ...defaultValues,
   };
 
-  const [data, setData] = useState([]);
   const [isEnd, setEnd] = useState(false);
   const [items, setItems] = useState([]);
   const [values, setValues] = useState(defaultValues);
   const [params, setParams] = useState(defaultParams);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchProductData(params);
-  }, [params]);
-
-  const fetchProductData = async (params) => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const query = new URLSearchParams(params).toString();
-      const response = await fetch(`http://localhost:5000/api/products?${query}`);
-      if (!response.ok) {
-        throw new Error("Failed to fetch product data");
-      }
-      const products = await response.json();
-      setData(products);
-      setIsSuccess(true);
-      if (products.length < params.limit) {
-        setEnd(true);
-      }
-    } catch (err) {
-      setError(err.message);
-      setIsSuccess(false);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  const { data = [], isLoading, isSuccess } = useGetProductsQuery(params);
 
   const handleChange = ({ target: { value, name } }) => {
-    
     setValues({ ...values, [name]: value });
-    if (name === "sortBy") {
-      setParams({ ...params, sortBy: value, offset: 0 });
+    if (name === 'sortBy') {
+      setParams({ ...params, sortBy: value });
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     setItems([]);
     setEnd(false);
-    setParams({ ...defaultParams, ...values, offset: 0 });
+    setParams({ ...defaultParams, ...values });
   };
 
   const handleReset = () => {
@@ -76,11 +49,20 @@ const ProductForm = () => {
   };
 
   useEffect(() => {
+    // Обновление списка продуктов при изменении данных от сервера
     if (data && data.length > 0) {
-      setItems((prevItems) => [...prevItems, ...data]);
+      setItems((prevItems) => {
+        const newItems = data.filter(
+          (newItem) => !prevItems.some((item) => item._id === newItem._id)
+        );
+        return [...prevItems, ...newItems];
+      });
+    } else if (data.length === 0) {
+      setEnd(true);
     }
   }, [data]);
 
+  // Функция для фильтрации элементов
   const applyFilters = (items) => {
     let filteredItems = items;
 
@@ -105,6 +87,7 @@ const ProductForm = () => {
     return filteredItems;
   };
 
+  // Функция для сортировки элементов
   const sortItems = (items) => {
     if (values.sortBy === "asc") {
       return items.slice().sort((a, b) => a.price - b.price);

@@ -19,7 +19,7 @@ class ProductService {
         };
     }
 
-    async getProducts(title = '', categoryId = '', limit = 10, offset = 0, price_min = 0, price_max = 0) {
+    async getProducts(title = '', categoryId = '', limit = Infinity, offset = 0, price_min = 0, price_max = 0) {
         let products;
     
         // Создаем объект для фильтрации

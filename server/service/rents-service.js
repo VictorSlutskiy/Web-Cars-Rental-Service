@@ -7,7 +7,10 @@ const rentModel = require('../models/rent-model');
 
 
 class RentsService {
-   
+  async deleteRent(rentId){
+    await rentModel.deleteOne({ _id: rentId });
+    return 'Успешно удалено';
+}
     async rentReq(userId, productId, price, period) {
       const currentDate = new Date();
       const endDate = new Date(currentDate.getTime() + period * 24 * 60 * 60 * 1000); // Добавляем период в миллисекундах

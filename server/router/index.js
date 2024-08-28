@@ -20,26 +20,26 @@ router.get('/activate/:link',userController.activate);
 router.get('/refresh',userController.refresh);
 router.get('/users',userController.getUsers);
 router.get('/users/:id',userController.getUser);
-router.post('/updateUser/:id',userController.updateUser);
-router.post('/deleteUser/:id',userController.deleteUser);
+router.patch('/updateUser/:id',userController.updateUser);
+router.delete('/deleteUser/:id',userController.deleteUser);
 router.post('/checkPassword/:id',userController.checkPass);
 
 
 router.post('/addClient',clientController.addClient);
 router.get('/getClient',clientController.getClient);
-router.post('/deleteClient',clientController.deleteClient);
+router.delete('/deleteClient',clientController.deleteClient);
 
 router.get('/categories',categoriesController.getCategories);
 router.get('/categories/:id',categoriesController.getCategory);
 router.post('/addCat',categoriesController.addCategory);
-router.post('/deleteCategory/:id',categoriesController.deleteCategory);
-router.post('/updateCategory/:id',categoriesController.updateCategory);
+router.delete('/deleteCategory/:id',categoriesController.deleteCategory);
+router.patch('/updateCategory/:id',categoriesController.updateCategory);
 
 router.get('/products/:id',productController.getProduct);
 router.get('/products',productController.getProducts);
 router.post('/addProduct',productController.addProduct);
-router.post('/deleteProduct/:id',productController.deleteProduct);
-router.post('/updateProduct/:id',productController.updateProduct);
+router.delete('/deleteProduct/:id',productController.deleteProduct);
+router.patch('/updateProduct/:id',productController.updateProduct);
 
 router.post('/rentReq/:productId',rentsController.rentReq);
 router.post('/confirmRent/:id',rentsController.confirmRent);
@@ -47,6 +47,6 @@ router.post('/endRent/:id',rentsController.endRent);
 router.get('/rent/:id',rentsController.getRent);
 router.get('/rentUser/:id',rentsController.getUserRent);
 router.get('/rents',rentsController.getRents);
-router.post('/deleteRent/:rentId',rentsController.deleteRent);
+router.delete('/deleteRent/:rentId',rentsController.deleteRent);
 
 module.exports = router

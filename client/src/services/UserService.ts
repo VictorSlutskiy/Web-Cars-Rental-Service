@@ -12,7 +12,7 @@ export default class UserService{
         return $api.get<IUser>(`/users/${id}`)
     }
     static deleteUser(id: string): Promise<AxiosResponse<IUser>>{
-        return $api.post<IUser>(`/deleteUser/${id}`)
+        return $api.delete<IUser>(`/deleteUser/${id}`)
     }
    
 }

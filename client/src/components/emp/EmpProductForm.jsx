@@ -15,7 +15,7 @@ const EmpProductForm = () => {
   };
 
   const defaultParams = {
-    limit: 5,
+    
     offset: 0,
     ...defaultValues,
   };

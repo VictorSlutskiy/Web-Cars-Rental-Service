@@ -6,7 +6,7 @@ import {AuthResponse, PassResponse} from '../models/response/AuthResponse'
 export default class AuthService{
    
     static async deleteUser(id:string): Promise<AxiosResponse<AuthResponse>>{
-        return $api.post<AuthResponse>(`/deleteUser/${id}`)
+        return $api.delete<AuthResponse>(`/deleteUser/${id}`)
     }
     static async login(email:string,password:string): Promise<AxiosResponse<AuthResponse>>{
         return $api.post<AuthResponse>('/login',{email,password})
@@ -21,7 +21,7 @@ export default class AuthService{
         return $api.post<AuthResponse>('/logout')
     }
     static async updateUser(id: string, updatedData: any): Promise<AxiosResponse<AuthResponse>> {
-        return $api.post<AuthResponse>(`/updateUser/${id}`, updatedData);
+        return $api.patch<AuthResponse>(`/updateUser/${id}`, updatedData);
 
     }
     static async checkOldPassword(id: string, password: any): Promise<AxiosResponse<PassResponse>> {

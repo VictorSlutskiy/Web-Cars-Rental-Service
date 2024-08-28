@@ -12,11 +12,11 @@ export default class ProductService{
     }
     static  deleteProduct(id:string): Promise<AxiosResponse<Product>>{
         
-        return $api.post<Product>(`/deleteProduct/${id}`)
+        return $api.delete<Product>(`/deleteProduct/${id}`)
     }
     static  updateProduct(id:string, data: any): Promise<AxiosResponse<Product>>{
         
-        return $api.post<Product>(`/updateProduct/${id}`, data)
+        return $api.patch<Product>(`/updateProduct/${id}`, data)
     }
     static  getProduct(id:string): Promise<AxiosResponse<Product>>{
         

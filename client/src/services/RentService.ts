@@ -13,7 +13,7 @@ export default class RentService{
         return $api.get<IRent[]>(`/rentUser/${id}`)
     }
     static async deleteRent(id: string): Promise<AxiosResponse<IRent>> {
-        return $api.post<IRent>(`/deleteRent/${id}` );
+        return $api.delete<IRent>(`/deleteRent/${id}` );
     }
     static async confirmRent(id: string): Promise<AxiosResponse<IRent>> {
         return $api.post<IRent>(`/confirmRent/${id}` );
